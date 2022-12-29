@@ -21,7 +21,7 @@ def main():
     if args.t == "local":
         print("local data")
         datastore = ws.get_default_datastore()
-        Dataset.File.upload_directory(src_dir = args.l, target_path = args.p, overwrite = True, show_progress = True)
+        Dataset.File.upload_directory(src_dir = args.l, target = args.p, overwrite = True, show_progress = True)
         print(f"About to register dataset {args.n}")
 
         dataset = Dataset.File.from_files(path=[(datastore, args.p)], validate=True)
