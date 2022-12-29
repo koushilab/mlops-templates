@@ -6,6 +6,8 @@ parameters:
   type: string
 
 steps:
+  - bash: |
+       ls 
   - task: AzureCLI@2
     displayName: Get compute
     inputs:
